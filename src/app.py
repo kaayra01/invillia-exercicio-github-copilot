@@ -39,7 +39,7 @@ activities = {
         "max_participants": 30,
         "participants": ["john@mergington.edu", "olivia@mergington.edu"]
     },
-    # Sports
+    # Esportivas
     "Soccer Team": {
         "description": "Join the school soccer team and compete in local leagues",
         "schedule": "Wednesdays, 4:00 PM - 6:00 PM",
@@ -52,7 +52,7 @@ activities = {
         "max_participants": 15,
         "participants": ["ana@mergington.edu", "carlos@mergington.edu"]
     },
-    # Arts
+    # Artísticas
     "Drama Club": {
         "description": "Act, direct, and produce school plays and performances",
         "schedule": "Tuesdays, 4:00 PM - 5:30 PM",
@@ -65,7 +65,7 @@ activities = {
         "max_participants": 16,
         "participants": ["julia@mergington.edu", "rafael@mergington.edu"]
     },
-    # Intellectual
+    # Intelectuais
     "Math Olympiad": {
         "description": "Prepare for math competitions and solve challenging problems",
         "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
@@ -100,7 +100,7 @@ def signup_for_activity(activity_name: str, email: str):
 
     # Get the specificy activity
     activity = activities[activity_name]
-    # Validate if studente is already signed up
+    # Validar se o aluno já está inscrito
     if email in activity["participants"]:
         raise HTTPException(status_code=400, detail="Student already signed up")
     # Add student
